@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Sala de Demonstrações de Física - UFMG</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .contact-header {
+            padding-top: calc(var(--nav-height) + 80px);
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .info-card {
+            padding: 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .info-icon {
+            color: var(--accent-primary);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .info-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .info-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .contact-form-wrapper {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+            outline: none;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .form-textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">F</div>
+                <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="sobre.html" class="nav-link">Sobre Nós</a>
+                <a href="demonstracoes.html" class="nav-link">Demonstrações</a>
+                <a href="contato.html" class="nav-link active">Contato</a>
+                <a href="contato.html" class="btn btn-primary"
+                    style="padding: 10px 20px; font-size: 0.9rem;">Visite-nos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <header class="contact-header fade-up">
+            <h1 class="hero-title">Entre em <span class="text-gradient">Contato</span></h1>
+            <p class="hero-subtitle mx-auto">Agende uma visita, solicite um experimento ou tire suas dúvidas com a nossa
+                equipe.</p>
+        </header>
+
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info fade-up" style="transition-delay: 0.1s;">
+                <div class="info-card glass-panel">
+                    <div class="info-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="info-title">Telefone</h3>
+                        <p class="info-text">(31) 3409-5678</p>
+                        <p class="info-text text-tertiary">Segunda a Sexta, 9h às 17h</p>
+                    </div>
+                </div>
+
+                <div class="info-card glass-panel">
+                    <div class="info-icon" style="color: var(--accent-secondary)">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="info-title">E-mail</h3>
+                        <p class="info-text">contato@fisica.ufmg.br</p>
+                        <p class="info-text">demonstracoes@fisica.ufmg.br</p>
+                    </div>
+                </div>
+
+                <div class="info-card glass-panel">
+                    <div class="info-icon" style="color: #10b981">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="info-title">Onde Estamos</h3>
+                        <p class="info-text">
+                            <strong>Instituto de Ciências Exatas (ICEx)</strong><br>
+                            Salas 2061 e 2062<br>
+                            Universidade Federal de Minas Gerais<br>
+                            Belo Horizonte, MG
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper glass-panel fade-up" style="transition-delay: 0.2s;">
+                <h3 class="bento-title mb-8">Envie uma mensagem</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nome Completo</label>
+                        <input type="text" id="name" class="form-input" placeholder="Ex: Maria Silva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">E-mail</label>
+                        <input type="email" id="email" class="form-input" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Assunto</label>
+                        <input type="text" id="subject" class="form-input"
+                            placeholder="Ex: Solicitação de Experimento ou Visita" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">Mensagem</label>
+                        <textarea id="message" class="form-textarea" placeholder="Como podemos te ajudar?"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container border-t">
+            <!-- (Footer Content Will Be Restructured globally next) -->
+            <div class="footer-bottom">
+                <!-- Global Footer Placeholder -->
+                <p>&copy; 2026 Sala de Demonstrações de Física - UFMG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

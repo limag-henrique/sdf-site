@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo de Demonstrações - SDF UFMG</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .page-header {
+            padding-top: calc(var(--nav-height) + 40px);
+            padding-bottom: 40px;
+            text-align: left;
+        }
+
+        /* Hero Spotlight for Light & Colors Kit */
+        .spotlight-hero {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.05));
+            border: 1px solid var(--border-glow);
+            border-radius: var(--radius-xl);
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spotlight-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(circle, var(--accent-glow), transparent 60%);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .spotlight-content {
+            flex: 1;
+            z-index: 10;
+        }
+
+        .spotlight-image {
+            flex: 1;
+            height: 300px;
+            border-radius: var(--radius-lg);
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            z-index: 10;
+        }
+
+        .filter-bar {
+            background: var(--bg-surface);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-full);
+            padding: 8px;
+            display: flex;
+            max-width: 100%;
+            margin-bottom: 40px;
+            gap: 8px;
+        }
+
+        .search-input {
+            flex-grow: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            padding: 12px 24px;
+            font-size: 1rem;
+            outline: none;
+            font-family: var(--font-sans);
+        }
+
+        /* Categories Section */
+        .category-tabs {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+            scrollbar-width: none;
+        }
+
+        .category-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cat-tab {
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .cat-tab.active,
+        .cat-tab:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: white;
+        }
+
+        .category-section {
+            display: none;
+            margin-bottom: 80px;
+        }
+
+        .category-section.active {
+            display: block;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .grid-card {
+            width: 100%;
+        }
+
+        @media (max-width: 992px) {
+            .spotlight-hero {
+                flex-direction: column;
+                padding: 40px;
+                gap: 32px;
+            }
+
+            .spotlight-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">F</div>
+                <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="sobre.html" class="nav-link">Sobre Nós</a>
+                <a href="demonstracoes.html" class="nav-link active">Demonstrações</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+                <a href="contato.html" class="btn btn-primary"
+                    style="padding: 10px 20px; font-size: 0.9rem;">Visite-nos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <header class="page-header fade-up">
+            <h1 class="hero-title" style="font-size: 3.5rem;">Acervo de <span class="text-gradient">Demonstrações</span>
+            </h1>
+            <p class="text-secondary" style="max-width: 600px; font-size: 1.1rem;">Explore nosso catálogo com mais de
+                300 experimentos documentados para enriquecer as aulas de física e aprender ciência na prática.</p>
+        </header>
+
+        <!-- Spotlight Hero -->
+        <div class="spotlight-hero fade-up" style="transition-delay: 0.1s;">
+            <div class="spotlight-content">
+                <div class="hero-badge mb-4"
+                    style="background: rgba(236,72,153,0.1); border-color: var(--accent-secondary); color: var(--accent-secondary);">
+                    Destaque Especial</div>
+                <h2 class="mb-4 text-gradient-accent" style="font-size: 2.5rem;">Kit de Luz e Cores</h2>
+                <p class="text-secondary mb-8">
+                    Desenvolvido pela equipe da SDF para estudantes e professores, o Kit de Luz e Cores contém materiais
+                    didáticos e roteiros práticos para a exploração de fenômenos ópticos impressionantes como reflexão,
+                    refração e difração.
+                </p>
+                <a href="#" class="btn btn-primary">
+                    Acessar Roteiros do Kit
+                </a>
+            </div>
+            <div class="spotlight-image">
+                <span class="text-uppercase tracking-wider">Placeholder: Foto do Kit de Luz e Cores</span>
+            </div>
+        </div>
+
+        <div class="filter-bar fade-up">
+            <input type="text" id="demo-search" class="search-input"
+                placeholder="Buscar experimento por tema, código ou palavra-chave...">
+        </div>
+
+        <!-- Categories Tabs -->
+        <div class="category-tabs fade-up" id="category-tabs">
+            <div class="cat-tab active" data-target="all">Todos</div>
+            <div class="cat-tab" data-target="mecanica">Mecânica</div>
+            <div class="cat-tab" data-target="fluidos">Mecânica dos Fluidos</div>
+            <div class="cat-tab" data-target="ondas">Oscilações e Ondas</div>
+            <div class="cat-tab" data-target="thermo">Termodinâmica</div>
+            <div class="cat-tab" data-target="em">Eletricidade e Magnetismo</div>
+            <div class="cat-tab" data-target="optica">Óptica</div>
+            <div class="cat-tab" data-target="moderna">Física Moderna</div>
+            <div class="cat-tab" data-target="astro">Astronomia</div>
+            <div class="cat-tab" data-target="equipamentos" style="border-color: var(--text-tertiary);">🛠️ Equipamentos
+            </div>
+        </div>
+
+        <!-- Dynamic Content Container -->
+        <div id="experiments-container" class="fade-up">
+            <!-- Loading State -->
+            <div class="text-center text-tertiary py-12" id="loading-indicator">
+                <p>Carregando experimentos...</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container border-t">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">F</div>
+                        <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+                    </a>
+                    <p class="footer-desc mb-4">
+                        Sala de Demonstrações de Física. Desenvolvendo demonstrações e promovendo a ciência.
+                    </p>
+                    <div class="text-tertiary">
+                        <strong>ICEx</strong> - Salas 2061 e 2062<br>
+                        Universidade Federal de Minas Gerais
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="demonstracoes.html" class="text-primary">Acervo</a></li>
+                        <li><a href="contato.html">Contato / Dúvidas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Universidades Parceiras</h4>
+                    <ul class="footer-links mb-8">
+                        <li><a href="#" target="_blank">MIT Physics Demo</a></li>
+                        <li><a href="#" target="_blank">Harvard Science</a></li>
+                        <li><a href="#" target="_blank">Stanford Experiments</a></li>
+                    </ul>
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="contato.html">contato@fisica.ufmg.br</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sala de Demonstrações de Física - UFMG.</p>
+                <div class="sponsors" style="margin-top: 0;">
+                    <div class="sponsor-placeholder" style="height: 40px; width: 100px;">Logo FAPEMIG</div>
+                    <div class="sponsor-placeholder" style="height: 40px; width: 100px;">Logo CAPES</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Data loading and rendering logic for Demonstracoes page
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('experiments.json')
+                .then(res => res.json())
+                .then(data => {
+                    window.allExperiments = data;
+                    renderExperiments(data);
+                    document.getElementById('loading-indicator').style.display = 'none';
+                })
+                .catch(err => {
+                    console.error("Failed to load experiments:", err);
+                    document.getElementById('loading-indicator').innerHTML = "Erro ao carregar os experimentos.";
+                });
+        });
+
+        function renderExperiments(experiments) {
+            const container = document.getElementById('experiments-container');
+            container.innerHTML = '';
+
+            if (experiments.length === 0) {
+                container.innerHTML = '<p class="text-tertiary text-center">Nenhum experimento encontrado.</p>';
+                return;
+            }
+
+            // Map frontend category IDs to JSON category names
+            const catMapping = {
+                "mecanica": "Mecânica",
+                "fluidos": "Mecânica dos Fluidos",
+                "ondas": "Oscilações e Ondas",
+                "thermo": "Termodinâmica",
+                "em": "Eletricidade e Magnetismo",
+                "optica": "Óptica",
+                "moderna": "Física Moderna",
+                "astro": "Astronomia e Astrofísica",
+                "equipamentos": "Equipamentos"
+            };
+
+            // Group experiments by category
+            const grouped = {};
+            experiments.forEach(exp => {
+                const cat = exp.category || 'Outros';
+                if (!grouped[cat]) grouped[cat] = [];
+                grouped[cat].push(exp);
+            });
+
+            // Keep track of which category is currently selected in UI
+            const activeTab = document.querySelector('.cat-tab.active').getAttribute('data-target');
+            const targetCategoryName = activeTab === 'all' ? 'all' : catMapping[activeTab];
+
+            for (const [category, items] of Object.entries(grouped)) {
+                // If a specific tab is selected, only show that category
+                if (targetCategoryName !== 'all' && category !== targetCategoryName) {
+                    continue;
+                }
+
+                const section = document.createElement('div');
+                section.className = 'category-section active';
+                section.innerHTML = `<h3 class="mb-4" style="color: var(--text-primary); border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-top: 40px;">${category} (${items.length})</h3>`;
+
+                const grid = document.createElement('div');
+                grid.className = 'demo-grid';
+
+                items.forEach(exp => {
+                    const imgHtml = exp.main_image
+                        ? `<img src="${exp.main_image}" alt="${exp.title}" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius-md);">`
+                        : '<span class="demo-image-placeholder">Sem Imagem</span>';
+
+                    grid.innerHTML += `
+                        <a href="${exp.url}" class="bento-item glass-panel demo-card grid-card fade-up visible">
+                            <div class="demo-card-image" style="padding:0; overflow:hidden;">
+                                ${imgHtml}
+                            </div>
+                            <div class="demo-card-content">
+                                ${exp.code ? `<div class="text-tertiary text-sm mb-2 font-mono">${exp.code}</div>` : ''}
+                                <h4 class="demo-card-title">${exp.title}</h4>
+                                <p class="demo-card-desc">${exp.description ? exp.description.substring(0, 100) + '...' : ''}</p>
+                                <span class="nav-link" style="font-size: 0.85rem;">Ler mais &rarr;</span>
+                            </div>
+                        </a>
+                    `;
+                });
+
+                section.appendChild(grid);
+                container.appendChild(section);
+            }
+        }
+
+        // Tab logic
+        document.querySelectorAll('.cat-tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+                e.target.classList.add('active');
+
+                if (window.allExperiments) {
+                    renderExperiments(window.allExperiments);
+                }
+            });
+        });
+
+        // Search logic
+        const searchInput = document.getElementById('demo-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                if (window.allExperiments) {
+                    const filtered = window.allExperiments.filter(exp =>
+                        (exp.title && exp.title.toLowerCase().includes(term)) ||
+                        (exp.code && exp.code.toLowerCase().includes(term)) ||
+                        (exp.description && exp.description.toLowerCase().includes(term))
+                    );
+                    renderExperiments(filtered);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Demonstrações de Física - UFMG</title>
+    <meta name="description"
+        content="Espaço multidisciplinar para compartilhamento de ideias, divulgação científica e aprendizagem na UFMG.">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">F</div>
+                <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Início</a>
+                <a href="sobre.html" class="nav-link">Sobre Nós</a>
+                <a href="demonstracoes.html" class="nav-link">Demonstrações</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+                <a href="#contato" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Visite-nos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge fade-up">🏆 Inscrições abertas para EITA! e SDF</div>
+            <h1 class="hero-title fade-up" style="transition-delay: 0.1s;">
+                Física além da <br> <span class="text-gradient">imaginação.</span>
+            </h1>
+            <p class="hero-subtitle fade-up" style="transition-delay: 0.2s;">
+                Explore mais de 300 demonstrações interativas e participe de projetos multidisciplinares focados em
+                inovação e divulgação científica.
+            </p>
+            <div class="hero-actions fade-up" style="transition-delay: 0.3s;">
+                <a href="demonstracoes.html" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Explorar Acervo
+                </a>
+                <a href="sobre.html" class="btn btn-outline">Conheça o Projeto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content & Bento Grid -->
+    <main class="container section pt-0" id="projetos">
+        <div class="text-center mb-8 fade-up">
+            <h2 class="text-gradient">Nossas Iniciativas</h2>
+            <p class="text-secondary mt-2">Tecnologia, inovação e aprendizado na prática.</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- EITA! Card -->
+            <div class="bento-item glass-panel bento-large fade-up">
+                <div class="bento-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3 class="bento-title">Conheça o EITA!</h3>
+                <p class="bento-desc">
+                    O <strong>EITA!</strong> é um espaço multidisciplinar para compartilhamento de ideias e para
+                    aprendizagem por meio do desenvolvimento de projetos baseados em problemas reais e atuais. Equipes
+                    de estudantes de diversos cursos utilizam técnicas, equipamentos e conteúdos multidisciplinares com
+                    foco em inovação.
+                </p>
+                <div>
+                    <a href="https://eitaufmg.wixsite.com/eita" target="_blank" class="btn btn-outline">Saiba mais →</a>
+                </div>
+            </div>
+
+            <!-- Processo Seletivo Card -->
+            <div class="bento-item glass-panel bento-medium fade-up" style="transition-delay: 0.1s;">
+                <div class="bento-icon" style="color: var(--accent-secondary)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3 class="bento-title">Processo Seletivo</h3>
+                <p class="bento-desc">
+                    Estamos selecionando estudantes de graduação para nossas equipes da <strong>SDF</strong> e
+                    <strong>EITA!</strong>.
+                </p>
+                <div>
+                    <a href="novidades/ver/129/Processo-Seletivo-para-SDF-e-EITA" class="nav-link"
+                        style="color: var(--accent-secondary)">Inscreva-se hoje</a>
+                </div>
+            </div>
+
+            <!-- Divulgação Científica Card -->
+            <div class="bento-item glass-panel bento-full fade-up" id="divulgacao" style="transition-delay: 0.2s;">
+                <div class="bento-content">
+                    <div class="bento-icon" style="color: var(--accent-primary)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                    </div>
+                    <h3 class="bento-title">Divulgação Científica</h3>
+                    <p class="bento-desc">
+                        Nós promovemos palestras e exposições científicas interativas com demonstrações reais de
+                        experimentos. Conciliamos a precisão científica da informação com a natural dificuldade de
+                        entendimento de um público leigo. Realizamos exposições e desenvolvemos Kits de Experimentos
+                        para todos os níveis de ensino.
+                    </p>
+                    <a href="artigos/ver/31/Divulgacao-Cientifica" class="btn btn-outline">Leia a matéria completa</a>
+                </div>
+                <div class="bento-image">
+                    <!-- Image Placeholder for Divulgação Científica -->
+                    <span class="demo-image-placeholder">Placeholder: Imagem Exposição</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Demonstrations Showcase Section -->
+    <section class="section" style="padding-top: 60px;">
+        <div class="container mb-8 flex items-center justify-between fade-up">
+            <div>
+                <h2 class="text-gradient">Veja essas demonstrações</h2>
+                <p class="text-secondary mt-2">Um pequeno vislumbre do nosso acervo de +300 experimentos.</p>
+            </div>
+            <a href="demonstracoes.html" class="nav-link hidden-mobile" style="flex-shrink: 0;">Ver todas →</a>
+        </div>
+
+        <div class="demo-scroll-wrapper fade-up" style="transition-delay: 0.1s;">
+            <div class="demo-track">
+
+                <!-- Demo 1 -->
+                <a href="demo/223/3A15.42-Pendulos-fisicos-diferentes-oscilam-com-a-mesma-frequencia"
+                    class="bento-item glass-panel demo-card">
+                    <div class="demo-card-image">
+                        <span class="demo-image-placeholder">Ícone: Pêndulos</span>
+                    </div>
+                    <div class="demo-card-content">
+                        <h4 class="demo-card-title">Pêndulos com mesma frequência</h4>
+                        <p class="demo-card-desc">Um disco, um anel, uma barra e uma massa na mola ajustados para
+                            oscilarem com o mesmo período.</p>
+                        <span class="nav-link" style="font-size: 0.85rem;">Ver experimento</span>
+                    </div>
+                </a>
+
+                <!-- Demo 2 -->
+                <a href="demo/238/3B30.40-Vela-e-altofalante" class="bento-item glass-panel demo-card">
+                    <div class="demo-card-image">
+                        <span class="demo-image-placeholder">Ícone: Vela e Som</span>
+                    </div>
+                    <div class="demo-card-content">
+                        <h4 class="demo-card-title">Vela e Altofalante</h4>
+                        <p class="demo-card-desc">A chama de uma vela oscila com a frequência da onda sonora. Sensor
+                            registra a intensidade da luz.</p>
+                        <span class="nav-link" style="font-size: 0.85rem;">Ver experimento</span>
+                    </div>
+                </a>
+
+                <!-- Demo 3 -->
+                <a href="demo/42/2C20.30-Bola-suspensa-em-jato-de-ar" class="bento-item glass-panel demo-card">
+                    <div class="demo-card-image">
+                        <span class="demo-image-placeholder">Ícone: Bola Flutuante</span>
+                    </div>
+                    <div class="demo-card-content">
+                        <h4 class="demo-card-title">Bola em Jato de Ar</h4>
+                        <p class="demo-card-desc">Uma bola de isopor é suspensa magicamente por um poderoso jato de ar
+                            direcionado para cima.</p>
+                        <span class="nav-link" style="font-size: 0.85rem;">Ver experimento</span>
+                    </div>
+                </a>
+
+                <!-- Demo 4 -->
+                <a href="demo/186/6A44.43-Reflexao-interna-total-de-um-feixe-de-luz-em-um-tubo"
+                    class="bento-item glass-panel demo-card">
+                    <div class="demo-card-image">
+                        <span class="demo-image-placeholder">Ícone: Fibra Óptica</span>
+                    </div>
+                    <div class="demo-card-content">
+                        <h4 class="demo-card-title">Reflexão Interna Total</h4>
+                        <p class="demo-card-desc">O feixe de luz de um laser descreve uma espiral luminosa em um tubo
+                            devido a múltiplas reflexões.</p>
+                        <span class="nav-link" style="font-size: 0.85rem;">Ver experimento</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="container mt-4 display-mobile-only text-center fade-up">
+            <a href="demonstracoes.html" class="btn btn-outline">Ver todo o acervo</a>
+        </div>
+    </section>
+
+    <!-- Top 4 Questions Section -->
+    <section class="section"
+        style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container fade-up">
+            <h2 class="text-gradient text-center mb-8">Dúvidas Frequentes</h2>
+
+            <div class="bento-grid" style="margin-top: 0;">
+                <div class="bento-item glass-panel bento-medium fade-up">
+                    <h4 class="bento-title" style="font-size: 1.1rem;">Como solicitar um experimento?</h4>
+                    <p class="bento-desc text-sm">Professores do ICEx podem solicitar demonstrações através do sistema
+                        interno ou preenchendo o formulário de contato com 48h de antecedência.</p>
+                </div>
+
+                <div class="bento-item glass-panel bento-medium fade-up" style="transition-delay: 0.1s;">
+                    <h4 class="bento-title" style="font-size: 1.1rem;">As demonstrações são apenas para a UFMG?</h4>
+                    <p class="bento-desc text-sm">Não. Escolas e instituições externas podem agendar visitas ou
+                        participar de nossos eventos de Divulgação Científica.</p>
+                </div>
+
+                <div class="bento-item glass-panel bento-medium fade-up" style="transition-delay: 0.2s;">
+                    <h4 class="bento-title" style="font-size: 1.1rem;">Como acesso o Kit de Luz e Cores?</h4>
+                    <p class="bento-desc text-sm">O kit foi distribuído a professores de escolas públicas, mas você pode
+                        consultar nossos materiais disponíveis para reprodutibilidade no site.</p>
+                </div>
+
+                <div class="bento-item glass-panel bento-full fade-up" style="transition-delay: 0.3s;">
+                    <h4 class="bento-title" style="font-size: 1.1rem; width: 100%;">Quais são as regras de uso do
+                        laboratório e equipamentos?</h4>
+                    <p class="bento-desc text-sm" style="margin-bottom: 0;">Os equipamentos devem ser manuseados apenas
+                        sob a supervisão da equipe responsável (bolsistas ou coordenadores). Danos ou perdas devem ser
+                        notificados imediatamente à coordenação. Todos os itens emprestados devem ser devolvidos limpos
+                        e no prazo estipulado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container border-t">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <div class="nav-logo-icon">F</div>
+                        <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+                    </a>
+                    <p class="footer-desc mb-4">
+                        Sala de Demonstrações de Física. Desenvolvendo demonstrações e promovendo a ciência de forma
+                        acessível e visual para todos.
+                    </p>
+                    <div class="text-tertiary">
+                        <strong>ICEx</strong> - Salas 2061 e 2062<br>
+                        Universidade Federal de Minas Gerais
+                    </div>
+
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="demonstracoes.html">Acervo de Demonstrações</a></li>
+                        <li><a href="contato.html">Contato / Dúvidas</a></li>
+                        <li><a href="https://eitaufmg.wixsite.com/eita">EITA!</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Universidades Parceiras</h4>
+                    <ul class="footer-links mb-8">
+                        <li><a href="#" target="_blank">MIT Physics Demo</a></li>
+                        <li><a href="#" target="_blank">Harvard Science</a></li>
+                        <li><a href="#" target="_blank">Stanford Experiments</a></li>
+                    </ul>
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="contato.html">contato@fisica.ufmg.br</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sala de Demonstrações de Física - UFMG.</p>
+                <!-- Sponsor Placeholders Bottom Row -->
+                <div class="sponsors" style="margin-top: 0;">
+                    <div class="sponsor-placeholder" style="height: 40px; width: 100px;">Logo FAPEMIG</div>
+                    <div class="sponsor-placeholder" style="height: 40px; width: 100px;">Logo CAPES</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

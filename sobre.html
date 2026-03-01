@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Projeto - Sala de Demonstrações de Física - UFMG</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .article-header {
+            padding-top: calc(var(--nav-height) + 60px);
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            color: var(--text-primary);
+            margin-top: 48px;
+            margin-bottom: 24px;
+        }
+
+        .article-content p {
+            margin-bottom: 24px;
+        }
+
+        .article-content img.placeholder-img {
+            width: 100%;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed var(--border-color);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            margin: 40px 0;
+            object-fit: cover;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            font-size: 0.8rem;
+        }
+
+        .team-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            color: var(--accent-primary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">F</div>
+                <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="sobre.html" class="nav-link active">Sobre Nós</a>
+                <a href="demonstracoes.html" class="nav-link">Demonstrações</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+                <a href="#contato" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Visite-nos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <header class="article-header fade-up">
+            <h1 class="hero-title">O Projeto</h1>
+            <p class="hero-subtitle mx-auto">Conheça a história e os objetivos da Sala de Demonstrações de Física da
+                UFMG.</p>
+        </header>
+
+        <article class="article-content">
+            <div class="placeholder-img fade-up text-uppercase tracking-wider">
+                Placeholder: Foto da Equipe no ICEx
+            </div>
+
+            <div class="fade-up">
+                <h2>Nossa Missão</h2>
+                <p>
+                    A Sala de Demonstrações de Física (SDF) é uma iniciativa do Departamento de Física da Universidade
+                    Federal de Minas Gerais. Nosso objetivo principal é prover os professores de ferramentas práticas —
+                    demonstrações reais e em tempo real — para enriquecer o ensino da física nos ciclos acadêmicos.
+                </p>
+                <p>
+                    Com um acervo de mais de 300 experimentos cuidadosamente projetados, ajudamos a traduzir conceitos
+                    teóricos complexos em experiências visuais concretas. Acreditamos que a física não deve ser ensinada
+                    apenas no quadro negro, mas vivida na prática.
+                </p>
+            </div>
+
+            <div class="fade-up">
+                <h2>Divulgação Científica e EITA!</h2>
+                <p>
+                    Além de atuar nas disciplinas regulares, nossa equipe tem um forte compromisso com a
+                    <strong>Divulgação Científica</strong>. Levamos palestras e exposições interativas para o público
+                    externo, conciliando o rigor acadêmico com a linguagem acessível, despertando a curiosidade
+                    científica em estudantes de todas as idades.
+                </p>
+
+                <p>
+                    O <strong>Espaço de Inovação, Tecnologia e Aprendizado (EITA!)</strong> é nossa vertente voltada
+                    para o desenvolvimento de projetos baseados em problemas reais. Aqui, equipes multidisciplinares têm
+                    acesso a equipamentos, ferramentas maker e mentoria para transformarem suas ideias inovadoras em
+                    realidade.
+                </p>
+            </div>
+
+            <div class="fade-up">
+                <h2>Nossa Equipe</h2>
+                <p>A SDF é mantida por professores coordenadores e uma equipe dedicada de bolsistas, voluntários e
+                    estudantes apaixonados por ciência e educação.</p>
+
+                <div class="team-grid">
+                    <!-- Team Placeholders -->
+                    <div class="team-member glass-panel">
+                        <div class="team-avatar">Foto</div>
+                        <div class="team-name">Prof. Coord. 1</div>
+                        <div class="team-role">Coordenador</div>
+                    </div>
+                    <div class="team-member glass-panel">
+                        <div class="team-avatar">Foto</div>
+                        <div class="team-name">Prof. Coord. 2</div>
+                        <div class="team-role">Coordenador</div>
+                    </div>
+                    <div class="team-member glass-panel">
+                        <div class="team-avatar">Foto</div>
+                        <div class="team-name">Estudante 1</div>
+                        <div class="team-role">Bolsista SDF</div>
+                    </div>
+                    <div class="team-member glass-panel">
+                        <div class="team-avatar">Foto</div>
+                        <div class="team-name">Estudante 2</div>
+                        <div class="team-role">Bolsista EITA!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="placeholder-img fade-up text-uppercase tracking-wider mt-12">
+                Placeholder: Foto do Laboratório / Acervo
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container border-t">
+            <div class="footer-grid">
+                <!-- (Same footer as index.html) -->
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">F</div>
+                        <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+                    </a>
+                    <p class="footer-desc mb-4">
+                        Sala de Demonstrações de Física. Desenvolvendo demonstrações e promovendo a ciência de forma
+                        acessível e visual para todos.
+                    </p>
+                    <div class="text-tertiary">
+                        <strong>ICEx</strong> - Salas 2061 e 2062<br>
+                        Universidade Federal de Minas Gerais
+                    </div>
+
+                    <div class="sponsors">
+                        <div class="sponsor-placeholder">Logo UFMG</div>
+                        <div class="sponsor-placeholder">Logo ICEx</div>
+                        <div class="sponsor-placeholder">Logo FAPEMIG</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html" class="text-primary">Sobre Nós</a></li>
+                        <li><a href="demonstracoes.html">Acervo de Demonstrações</a></li>
+                        <li><a href="contato.html">Contato / Dúvidas</a></li>
+                        <li><a href="https://eitaufmg.wixsite.com/eita">EITA!</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Apoio</h4>
+                    <ul class="footer-links mb-8">
+                        <li><a href="apoie" class="text-gradient-accent font-bold">Apoie esse projeto →</a></li>
+                        <li><a href="visitas">Agende uma visita</a></li>
+                    </ul>
+
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="contato.html">contato@fisica.ufmg.br</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sala de Demonstrações de Física - UFMG.</p>
+                <p>Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
