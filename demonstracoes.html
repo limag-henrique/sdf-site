@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+    <link rel="icon" type="image/png" href="images/logo (2).png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acervo de Demonstrações - SDF UFMG</title>
@@ -150,8 +151,9 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
-                <div class="nav-logo-icon">F</div>
-                <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+                <img src="images/logo%20(2).png" alt="Logo SDF" style="height: 40px; object-fit: contain;">
+                <span class="header-title-text">Sala de Demonstração de Física da <span
+                        class="text-gradient-accent">UFMG</span></span>
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Início</a>
@@ -186,12 +188,12 @@
                     didáticos e roteiros práticos para a exploração de fenômenos ópticos impressionantes como reflexão,
                     refração e difração.
                 </p>
-                <a href="#" class="btn btn-primary">
+                <a href="index.html" class="btn btn-primary">
                     Acessar Roteiros do Kit
                 </a>
             </div>
-            <div class="spotlight-image">
-                <span class="text-uppercase tracking-wider">Placeholder: Foto do Kit de Luz e Cores</span>
+            <div class="spotlight-image" style="padding:0; overflow:hidden;">
+                <img src="images/3207d276.jpg" alt="Kit de Luz e Cores" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius-lg);">
             </div>
         </div>
 
@@ -216,7 +218,7 @@
         </div>
 
         <!-- Dynamic Content Container -->
-        <div id="experiments-container" class="fade-up">
+        <div id="experiments-container">
             <!-- Loading State -->
             <div class="text-center text-tertiary py-12" id="loading-indicator">
                 <p>Carregando experimentos...</p>
@@ -231,8 +233,9 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="nav-logo">
-                        <div class="nav-logo-icon">F</div>
-                        <span>Dem<span class="text-gradient-accent">UFMG</span></span>
+                        <img src="images/logo%20(2).png" alt="Logo SDF" style="height: 40px; object-fit: contain;">
+                        <span class="header-title-text">Sala de Demonstração de Física da <span
+                                class="text-gradient-accent">UFMG</span></span>
                     </a>
                     <p class="footer-desc mb-4">
                         Sala de Demonstrações de Física. Desenvolvendo demonstrações e promovendo a ciência.
@@ -256,9 +259,11 @@
                 <div>
                     <h4 class="footer-title">Universidades Parceiras</h4>
                     <ul class="footer-links mb-8">
-                        <li><a href="#" target="_blank">MIT Physics Demo</a></li>
-                        <li><a href="#" target="_blank">Harvard Science</a></li>
-                        <li><a href="#" target="_blank">Stanford Experiments</a></li>
+                        <li><a href="https://tsgphysics.mit.edu/" target="_blank">MIT Physics Demo</a></li>
+                        <li><a href="https://sciencedemonstrations.fas.harvard.edu/" target="_blank">Harvard Science</a>
+                        </li>
+                        <li><a href="https://physics.stanford.edu/research/experiments" target="_blank">Stanford
+                                Experiments</a></li>
                     </ul>
                     <h4 class="footer-title">Contato</h4>
                     <ul class="footer-links">
@@ -270,8 +275,8 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Sala de Demonstrações de Física - UFMG.</p>
                 <div class="sponsors" style="margin-top: 0;">
-                    <div class="sponsor-placeholder" style="height: 40px; width: 100px;">Logo FAPEMIG</div>
-                    <div class="sponsor-placeholder" style="height: 40px; width: 100px;">Logo CAPES</div>
+                    <img src="images/patrocinadores.png" alt="Patrocinadores"
+                        style="height: 60px; object-fit: contain;">
                 </div>
             </div>
         </div>
@@ -330,7 +335,7 @@
 
             for (const [category, items] of Object.entries(grouped)) {
                 // If a specific tab is selected, only show that category
-                if (targetCategoryName !== 'all' && category !== targetCategoryName) {
+                if (activeTab !== 'all' && category !== targetCategoryName) {
                     continue;
                 }
 
@@ -344,7 +349,7 @@
                 items.forEach(exp => {
                     const imgHtml = exp.main_image
                         ? `<img src="${exp.main_image}" alt="${exp.title}" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius-md);">`
-                        : '<span class="demo-image-placeholder">Sem Imagem</span>';
+                        : '<div class="demo-image-placeholder text-center p-4">Sem Imagem</div>';
 
                     grid.innerHTML += `
                         <a href="${exp.url}" class="bento-item glass-panel demo-card grid-card fade-up visible">
@@ -354,7 +359,7 @@
                             <div class="demo-card-content">
                                 ${exp.code ? `<div class="text-tertiary text-sm mb-2 font-mono">${exp.code}</div>` : ''}
                                 <h4 class="demo-card-title">${exp.title}</h4>
-                                <p class="demo-card-desc">${exp.description ? exp.description.substring(0, 100) + '...' : ''}</p>
+                                <p class="demo-card-desc">${exp.description ? (exp.description.length > 100 ? exp.description.substring(0, 100) + '...' : exp.description) : ''}</p>
                                 <span class="nav-link" style="font-size: 0.85rem;">Ler mais &rarr;</span>
                             </div>
                         </a>
